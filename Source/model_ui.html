@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Interface</title>
+
+    <style>
+        * {
+            font-family: Arial;
+            margin-top: 10px;
+        }
+
+        #video-display {
+            width: 200px;
+            /* Set the desired width */
+            height: 200px;
+            /* Set the desired height */
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 style="font-family: Arial;">Model Server Interface</h1>
+
+
+    <select id="file-select"></select>
+    <div id="video-section">
+        <video id="video-display" controls></video>
+    </div>
+
+    <button onclick="uploadFile()">Send File to Operator</button>
+    <button id="watch-video-btn" onclick="watchVideo()">Watch Video</button>
+
+    <div id="video-container"></div>
+    <script src="{{ url_for('static', filename='model_script.js')}}"></script>
+</body>
+
+</html>
